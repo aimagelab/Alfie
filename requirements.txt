@@ -1,0 +1,15 @@
+einops~=0.7.0
+nltk~=3.8.1
+accelerate~=0.33.0
+diffusers~=0.29.2
+transformers~=4.43.3
+tqdm~=4.66.2
+pillow~=10.2.0
+SentencePiece~=0.2.0
+ftfy~=6.2.0
+beautifulsoup4~=4.12.3
+opencv-contrib-python~=4.9.0.80
+scikit-image~=0.23.1
+matplotlib~=3.8.4
+loralib~=0.1.2
+spacy~=3.7.5
