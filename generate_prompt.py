@@ -2,7 +2,7 @@ from pathlib import Path
 from settings import parse_setting
 import json
 
-from sam_aclip_pixart_sigma.generate import get_pipe, base_arg_parser, parse_bool_args
+from alfie.generate import get_pipe, base_arg_parser, parse_bool_args
 
 from transformers import VitMatteImageProcessor, VitMatteForImageMatting
 
@@ -11,11 +11,11 @@ from accelerate import PartialState
 from accelerate.logging import get_logger
 from accelerate.utils import set_seed
 
-from sam_aclip_pixart_sigma.grabcut import grabcut, save_rgba
+from alfie.grabcut import grabcut, save_rgba
 
 import torch
-from sam_aclip_pixart_sigma.trimap import compute_trimap
-from sam_aclip_pixart_sigma.utils import normalize_masks
+from alfie.trimap import compute_trimap
+from alfie.utils import normalize_masks
 
 torch.backends.cuda.matmul.allow_tf32 = True
 
