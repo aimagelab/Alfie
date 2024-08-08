@@ -14,6 +14,7 @@ pip install -r requirements.txt
 
 ```python
 python generate_prompt.py --setting centering-rgba-alfie --fg_prompt 'A photo of a cat with a hat'
+python generate_prompt.py --setting centering-rgba-alfie --fg_prompt 'A large, colorful tree made of money, with lots of yellow and white coins hanging from its branches'
 
 ```
 

@@ -101,7 +101,9 @@ def main():
             alfie_rgba_image_filename =  Path(args.save_folder / f"{name}-rgba-alfie.png")
             alfie_rgba_image_filename.parent.mkdir(parents=True, exist_ok=True)
             alpha_mask_alfie = torch.tensor(alpha_mask)
-            alpha_mask_alfie = torch.where(alpha_mask_alfie == 1, normalize_masks(heatmaps['ff_heatmap'] + 1 * heatmaps['cross_heatmap_fg']), 0.)
+            alfa_hat = normalize_masks(heatmaps['ff_heatmap'] + 1 * heatmaps['cross_heatmap_fg'])
+            alfa_hat = (alfa_hat + args.k * alfa_hat).clip(0, 1)
+            alpha_mask_alfie = torch.where(alpha_mask_alfie == 1, alfa_hat, 0.)
             save_rgba(image, alpha_mask_alfie, alfie_rgba_image_filename)
 
         elif args.cutout_model == 'vit-matte':

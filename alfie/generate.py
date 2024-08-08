@@ -94,6 +94,7 @@ def get_pipe(image_size, scheduler, device):
 def base_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--centering", type=str, default='True')
+    parser.add_argument("--k", type=int, default=1)
     parser.add_argument("--resample", type=str, default='True')
     parser.add_argument("--scheduler", type=str, default='euler', choices=['euler', 'euler_ancestral'])
     parser.add_argument("--use_neg_prompt", type=str, default='True')
