@@ -11,7 +11,6 @@ import argparse
 import logging
 from accelerate.logging import get_logger
 
-import numpy as np
 import torch
 
 torch.backends.cuda.matmul.allow_tf32 = True
@@ -94,7 +93,7 @@ def get_pipe(image_size, scheduler, device):
 def base_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--centering", type=str, default='True')
-    parser.add_argument("--k", type=int, default=1)
+    parser.add_argument("--k", type=float, default=1.)
     parser.add_argument("--resample", type=str, default='True')
     parser.add_argument("--scheduler", type=str, default='euler', choices=['euler', 'euler_ancestral'])
     parser.add_argument("--use_neg_prompt", type=str, default='True')
@@ -102,12 +101,12 @@ def base_arg_parser():
     parser.add_argument("--exclude_generic_nouns", type=str, default='True')
     parser.add_argument("--image_size", type=int, default=512)
     parser.add_argument("--steps", type=int, default=30)
-    parser.add_argument("--cutout_model", type=str, default='grabcut', choices=['grabcut', 'vit-matte', 'sam'])
+    parser.add_argument("--cutout_model", type=str, default='grabcut', choices=['grabcut', 'vit-matte'])
     parser.add_argument("--sure_fg_threshold", type=int, default=0.8)
     parser.add_argument("--maybe_fg_threshold", type=int, default=0.3)
     parser.add_argument("--maybe_bg_threshold", type=int, default=0.1)
     parser.add_argument("--num_images", type=int, default=3)
-    parser.add_argument("--use_suffix", type=str, default='False', help='Add the suffix on a white background')
+    parser.add_argument("--use_suffix", type=str, default='False', help='Add the suffix "on a white background"')
     parser.add_argument("--seed", type=int, default=2024, help="random seed")
     parser.add_argument("--vit_matte_key", type=str, default='hustvl/vitmatte-base-composition-1k')
     parser.add_argument("--nouns_to_exclude", nargs='+', default=[
