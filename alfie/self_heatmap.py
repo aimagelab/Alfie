@@ -254,7 +254,7 @@ class SelfGlobalHeatMap:
         latent_pixel_id: The latent pixel id from which the heatmap will be diffused throughout the latent image
         method: Currently only has `thresholding` where at each step to remove the misguiding/noisy pixels to
                 prevent them from focussing/enhancing wrong heatmaps, we use simple thresholding
-        n_iter: For how many interations to refine the heatmap as described above
+        n_iter: For how many interactions to refine the heatmap as described above
         plot_itermediate: If the intermediate heatmaps need to plotted to show the evolutation
 
         """
@@ -288,7 +288,7 @@ class SelfGlobalHeatMap:
         `n_iter` number of iterations. Returns a SelfGlobalHeatMap collection of the attention diffused heatmaps for all pixels
         method: Currently only has `thresholding` where at each step to remove the misguiding/noisy pixels to
                 prevent them from focussing/enhancing wrong heatmaps, we use simple thresholding
-        n_iter: For how many interations to refine the heatmap as described above
+        n_iter: For how many interactions to refine the heatmap as described above
 
         """
         # convert the latent 2d image from height.width x height x weight to 1 x height.weight x height x weight
