@@ -1,6 +1,6 @@
 # Alfie
 
-This repository contains the reference code and dataset for the paper [Alfie:Democratising RGBA Image Generation With No $$$](https://arxiv.org/abs/2408.14826).
+This repository contains the reference code and dataset for the paper [Alfie: Democratising RGBA Image Generation With No $$$](https://arxiv.org/abs/2408.14826).
 If you find it useful, please cite it as:
 ```
 @inproceedings{quattrini2024alfie,
