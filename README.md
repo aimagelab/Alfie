@@ -1,5 +1,16 @@
 # Alfie
 
+This repository contains the reference code and dataset for the paper [Alfie:Democratising RGBA Image Generation With No $$$](https://arxiv.org/abs/2408.14826).
+If you find it useful, please cite it as:
+```
+@inproceedings{quattrini2024alfie,
+  title={{Alfie: Democratising RGBA Image Generation With No $$$}},
+  author={Quattrini, Fabio and Pippi, Vittorio and Cascianelli, Silvia and Cucchiara, Rita},
+  booktitle{Proceedings of the European Conference on Computer Vision Workshops},
+  year={2024}
+}
+```
+
 ## Setup
 
 ```bash
