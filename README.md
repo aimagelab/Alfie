@@ -7,7 +7,8 @@ If you find it useful, please cite it as:
   title={{Alfie: Democratising RGBA Image Generation With No $$$}},
   author={Quattrini, Fabio and Pippi, Vittorio and Cascianelli, Silvia and Cucchiara, Rita},
   booktitle{Proceedings of the European Conference on Computer Vision Workshops},
-  year={2024}
+  year={2024},
+  organization={Springer}
 }
 ```
 
